@@ -2,6 +2,6 @@
 
 mkdir ./dist
 cd slides
-pnpm install
-pnpm build
+bun install
+bun run build -- -o ../dist
 cd ..
