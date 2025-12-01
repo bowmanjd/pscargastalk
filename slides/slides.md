@@ -33,25 +33,18 @@ hideInToc: true
 [pscargas.bowmanjd.com](https://pscargas.bowmanjd.com)
 
 <!--
-I have grown to a place where I have to say: I like Powershell. I'll even recommend Powershell for a variety of use cases. And I genuinely enjoy working with the syntax. I don't know that I will convince you to use Powershell this evening; I don't think I'll even try to. But I do hope you might leave here with a renewed eagerness to engage the command-line shell, whatever that might mean in your context.
+I have grown to a place where I have to say: I like Powershell. I'll even recommend Powershell for a variety of use cases. And I genuinely enjoy working with the syntax. I don't know that I will convince you to use Powershell today; I don't think I'll even try to. But I have a hunch that some of you, in some scenarios, might find this to be the right tool for the job. If you use Windows, you have a version of Powershell installed by default. Many of your customers' servers may also have a version of Powershell. So its there if you need it.
 -->
 
 ---
-layout: two-cols
 hideInToc: true
 ---
 
-<div class="justify-center flex">
-
 ![qr code for pscargas.bowmanjd.com](/qrcode.svg)
-
-</div>
 
 # [pscargas.bowmanjd.com](https://pscargas.bowmanjd.com)
 
-::right::
-
-- [github.com/bowmanjd/pscargastalk](https://github.com/bowmanjd/pscargastalk)
+[github.com/bowmanjd/pscargastalk](https://github.com/bowmanjd/pscargastalk)
 
 <!--
 
@@ -67,7 +60,7 @@ layout: full
 
 <!--
 
-Here is our itinerary today
+Here is our itinerary today. This is part part basic understandings, part technical how-to, part story-telling. So a little more fluffy than subsequent sessions. If you want subsequent sessions.
 
 -->
 
@@ -95,7 +88,7 @@ layout: quote
 
 Just to be different, I thought that instead of showing you an xkcd comic, I would just show the alt-text. To make the point that shells have a reputation of being intimidatingly complex.
 
-Possibly the most popular shell today is bash, or maybe zsh. These shells have been around a few decades, and the tools that you might use along with them could have been around even longer. When such an ecosystem evolves over time it can get to be somewhat complex, intimidating. I'll bet at some level, all of us are script kiddies: find something online, paste it in. Yay it works, maybe, but we don't know why.
+Possibly the most popular shell today is bash, or maybe zsh. If you ever use something Unix-y, like Linux or Mac, these are the shells you have by default. These shells have been around a few decades, and the tools that you might use along with them could have been around even longer. When such an ecosystem evolves over time it can get to be somewhat complex, intimidating. I'll bet at some level, all of us are script kiddies: find something online, paste it in. Yay it works, maybe, but we don't know why.
 
 If that is as advanced as you get with your shell, you are not alone.
 
@@ -152,7 +145,7 @@ Some, like Mac Terminal, Windows Terminal, or Gnome Terminal, probably came with
 
 There are some hip newer terminals that run on Windows, Mac and Linux, such as those on the right.
 
-None of these are shells, though.
+None of these are shells, though. And it gets confusing on Windows. In not very old versions of Windows, when you launch Powershell you get a window. That window is a terminal called conhost, until recently. And the shell inside it is Powershell. We don't really need to understand that, but I hope you will seek out Windows Terminal. If you don't have it, get it. But you probably do have it, and can make a shortcut in a convenient location for you.
 
 -->
 
@@ -185,6 +178,8 @@ An interpreter that provides a command-line user interface for operating systems
 
 A shell is an interpreter to interact with or run scripts with. Some nice old ones are on the left. If you run Mac, you likely use zsh. If you run Linux, you may run bash or possibly zsh. If you live on the front of the bell curve, you might use one from the right column.
 
+These don't really matter to us if we are on Windows using Powershell. Other than the history: Powershell exists because people wanted to bring the power and flexibility of these tools to Windows. And then people wanted Powershell on more than just Windows.
+
 -->
 ---
 layout: image
@@ -203,41 +198,6 @@ From the 1984 book _The Unix Programming Environmment_ by Brian Kernighan and Ro
 -->
 
 ---
-layout: two-cols
----
-
-## Typically part of shell
-
-- cd
-- ls
-- echo
-- help
-- pwd
-- read
-
-::right::
-
-<span v-click>
-
-## Not usually baked-in
-
-- cat
-- grep
-- tail, head
-- more, less
-- sed, awk, vi
-
-</span>
-
-<!--
-
-When we use a command-line shell, it is easy to think that all the tools we are using are baked into the shell. But you can change your shell, and keep using the very same grep, and the very same pager you are used to.
-
-This is both a benefit and a problem. Love the personalization of mixing and matching tools, but on the other hand when it comes to sharing scripts... How do you know which grep your friends have? On the other hand, kitchen-sink-included shells like Powershell, Nushell, or xonsh have an abundance of built-in tools, but that introduces a future maintenance burden for the project. You decide.
-
--->
-
----
 layout: section
 ---
 
@@ -245,7 +205,7 @@ layout: section
 
 <!--
 
-Here is my Powershell story. Let's talk about Windows for a little bit
+Here is my Powershell story. Let's talk about Windows Server for a little bit
 
 -->
 
@@ -356,17 +316,17 @@ Powershell is much bigger than that, as I find out later. But if you do a casual
 
 ---
 
-## Use case #1
+## Not a "coder"? This could be where you start...
 
-- You "have a friend" who could use a little more automation
-- Some of what they need to automate is Windows...
-- ...or they struggle with bash 🤭😲🧑‍💻
+- The attraction of automating the repetive and/or error-prone stuff
+- Powershell is intended to be human readable and writable
+- Powershell is shareable, repeatable
 
 <!--
 
 There are a lot of people who do not write code. Who do not think they can write code. And they start because they want to make their system administration a little easier. And Powershell is that gentle on-ramp for writing computer programs to make life better.
 
-In addition, and I recognize this is probably controversial, there are people who might not pick up bash, but they might just pick up Powershell. The same argument could be made for Python or Ruby. Or a newer shell like fish, Nushell, etc.
+People who might not pick up bash or Python or Ruby, might just pick up Powershell.
 
 -->
 
@@ -566,17 +526,19 @@ When Powershell was open-sourced and also compiled to various platforms, I was p
 
 ---
 
-## Use case #2
+## Yes, it will run on your machine
 
-- You want to share a shell script and trust that it will work on a variety of platforms, even Windows
-- Maybe you write a bash script _and_ a Powershell script...
-- Or if all your friends already have Powershell or can install it easily...
+- Powershell is not just for Windows
+- Write in modern Powershell whenever possible, for maximum flexibility
+- You can share a shell script and trust that it will work on a variety of platforms
+- Powershell is easy to install on Mac and Linux
+- Do note that Powershell 5 and Powershell 7 are different, slightly
 
 <!--
 
-I often find myself in a software shop where I am the lone Linux person. So, if I am surrounded by Mac people, and I want to share a script, I will make sure it works in zsh, or whatever runtimes I can count on, such as Python or Node.
+I often write a Powershell script on Linux and share it with Windows users. Works fine.
 
-If surrounded by Windows people, powershell is a great choice. They can just run it. And I can still develop it on my OS of choice. I often write a Powershell script on Linux and share it with Windows users.
+If surrounded by Windows like we are here, powershell is a great choice. You can just run it. But your script will likely work elsewhere, too.
 
 -->
 
@@ -614,7 +576,7 @@ Powershell 5.1 is pre-installed on Windows. But the current cross-platform versi
 - Any VS Code derivative like Cursor, Antigravity, etc.
 - Neovim works well (suggested plugins: mason, nvim-lspconfig (use `powershell_es`), mason-lspconfig
 - Language Server: [github.com/PowerShell/PowerShellEditorServices](https://github.com/PowerShell/PowerShellEditorServices)
-- Powershell ISE is available, but Microsoft has deprecated it.
+- Powershell ISE is available, but Microsoft has deprecated it. It does not support modern Powershell
 
 <!--
 
@@ -626,10 +588,9 @@ Powershell and VS Code certainly seem made for each other. I enjoy writing Power
 layout: fact
 ---
 
-## Use case #3
+## An Ecosystem
 
-You or an accomplice needs to accomplish a specific task for which Powershell has a relevant and well-maintained module or script.
-
+Your task may already have an existing Powershell module or script.
 
 <!-- Powershell might be the right choice if it has the right module available. Want to interface with Azure? Manipulate an Excel document? Powershell is a well-respected for both of those tasks, for instance. -->
 
@@ -750,7 +711,7 @@ RelationLink      : {}
 
 `Invoke-WebRequest` is a built-in Powershell cmdlet that functions a little like curl or wget, if you are familiar with those command-line http clients. Here we give it an API URL for Wikipedia, asking it to return a list of articles that link to the Shell (computing) article.
 
-And you might expect it to return JSON response body. I kinda does...
+And you might expect it to return JSON response body. It kinda does...
 
 [click] But it returns an object, not just text. In this output, on the left we see property names, on the right their values, such as headers, content length, and so on.
 
@@ -1048,17 +1009,24 @@ $pages | ConvertTo-Html -Fragment
 ```powershell
 $pages | ConvertTo-Html -Fragment -Property Key, Title, Description
 ```
+
+```powershell
+($pages | ConvertTo-Html -Fragment -Property Key, Title, Description) `
+-replace '</colgroup>', "</colgroup>`n<tbody>" -replace "</table>", "</tbody>`n</table>"
+```
 ````
 
 ```html {hide|all}
 <table>
 <colgroup><col/><col/><col/></colgroup>
+<tbody>
 <tr><th>key</th><th>title</th><th>description</th></tr>
 <tr><td>North_Korea</td><td>North Korea</td><td>Country in East Asia</td></tr>
 <tr><td>Microsoft_Windows</td><td>Microsoft Windows</td><td>Computer operating systems</td></tr>
 <tr><td>MacOS</td><td>MacOS</td><td>Operating system for Apple computers</td></tr>
 <tr><td>Linux</td><td>Linux</td><td>Family of Unix-like operating systems</td></tr>
 <tr><td>Operating_system</td><td>Operating system</td><td>Software that manages computer hardware resources</td></tr>
+</tbody>
 </table>
 ```
 
@@ -1070,7 +1038,10 @@ So, an array of objects can be piped to other interesting cmdlets, such as Conve
 
 [click] And select just the properties we want from the properties we discovered when we ran the previous command.
 
+[click] we can also manipulate the output as desired; here I use the -replace string option twice. Note also the grave accent, which is the line continuation character
+
 [click] And here is our output. Let's see it in the browser for the sake of prettiness...
+
 
 -->
 
@@ -1078,12 +1049,14 @@ So, an array of objects can be piped to other interesting cmdlets, such as Conve
 
 <table>
 <colgroup><col/><col/><col/></colgroup>
+<tbody>
 <tr><th>key</th><th>title</th><th>description</th></tr>
 <tr><td>North_Korea</td><td>North Korea</td><td>Country in East Asia</td></tr>
 <tr><td>Microsoft_Windows</td><td>Microsoft Windows</td><td>Computer operating systems</td></tr>
 <tr><td>MacOS</td><td>MacOS</td><td>Operating system for Apple computers</td></tr>
 <tr><td>Linux</td><td>Linux</td><td>Family of Unix-like operating systems</td></tr>
 <tr><td>Operating_system</td><td>Operating system</td><td>Software that manages computer hardware resources</td></tr>
+</tbody>
 </table>
 
 <!--
@@ -1139,7 +1112,7 @@ Let's narrow it down to the most relevant results. Goodbye, North Korea.
 
 [click] Note this convenient way of selecting a property from each element in an array. No verbose iteration necessary.
 
-[click] And there we have it. You probably wondered what ordering the Sort-Object cmdlet uses. As you can see hear, 
+[click] And there we have it. You probably wondered what ordering the Sort-Object cmdlet uses. As you can see here, 
 
 [click] it always sorts 
 
@@ -1326,7 +1299,7 @@ With this Powershell script, query to your heart's content from the comfort of t
 .EXAMPLE
 Enter-RabbitHole -limit 20 "linksto:Shell_(computing)"
 .LINK
-https://github.com/bowmanjd/pstalk/tree/main/slides/snippets
+https://github.com/bowmanjd/pscargastalk/tree/main/slides/snippets
 #>
 function Enter-RabbitHole
 {
@@ -1354,7 +1327,7 @@ With this Powershell script, query to your heart's content from the comfort of t
 .EXAMPLE
 Enter-RabbitHole -limit 20 "linksto:Shell_(computing)"
 .LINK
-https://github.com/bowmanjd/pstalk/tree/main/slides/snippets
+https://github.com/bowmanjd/pscargastalk/tree/main/slides/snippets
 #>
 function Enter-RabbitHole
 {
@@ -1384,7 +1357,7 @@ With this Powershell script, query to your heart's content from the comfort of t
 .EXAMPLE
 Enter-RabbitHole -limit 20 "linksto:Shell_(computing)"
 .LINK
-https://github.com/bowmanjd/pstalk/tree/main/slides/snippets
+https://github.com/bowmanjd/pscargastalk/tree/main/slides/snippets
 #>
 function Enter-RabbitHole
 {
@@ -1408,7 +1381,7 @@ function Enter-RabbitHole
 
 <!--
 
-And here is the fun of shell scripting. Up until this point, we may have tried some things from the command prompt, built the pipeline out a bit. And now, we can take those same commands and build it out as a script to be re-used later. These lines you see can be saved to a file and run and re-run with Powershell.
+And here is the fun of shell scripting. Up until this point, we may have tried some things from the command prompt, built the pipeline out a bit. And now, we can take those same commands and build it out as a script to be re-used later. These lines you see can be saved to a file and run and re-run with Powershell. Just as they are.
 
 But let's polish this thing and make it a legit Powershell cmdlet with parameters, help, and so on.
 
