@@ -33,7 +33,7 @@ hideInToc: true
 [pscargas.bowmanjd.com](https://pscargas.bowmanjd.com)
 
 <!--
-I have grown to a place where I have to say: I like Powershell. I'll even recommend Powershell for a variety of use cases. And I genuinely enjoy working with the syntax. I don't know that I will convince you to use Powershell today; I don't think I'll even try to. But I have a hunch that some of you, in some scenarios, might find this to be the right tool for the job. If you use Windows, you have a version of Powershell installed by default. Many of your customers' servers may also have a version of Powershell. So its there if you need it.
+I am not predisposed to loving Microsoft products, but I have grown to a place where I have to say: I like Powershell. I'll even recommend Powershell for a variety of use cases. And I genuinely enjoy working with the syntax. I don't intend to convince you to use Powershell for everything today; I don't think I'll even try to. But I have a hunch that some of you, in some scenarios, might find this to be the right tool for the job. If you use Windows, you have a version of Powershell installed by default. Many of your customers' servers may also have a version of Powershell. So its there if you need it. And it is extraordinarily flexible, and fairly easy to learn.
 -->
 
 ---
@@ -60,7 +60,7 @@ layout: full
 
 <!--
 
-Here is our itinerary today. This is part part basic understandings, part technical how-to, part story-telling. So a little more fluffy than subsequent sessions. If you want subsequent sessions.
+Here is our itinerary today. This is part basic understandings, part technical how-to, part story-telling. So a little more fluffy than subsequent sessions. If you want subsequent sessions...
 
 -->
 
@@ -109,7 +109,7 @@ But let's not get too intimidated or paralyzed... we can wade in. Let's start si
 
 The shell is glue. Minimally, it helps you navigate filesystems, and get content into and out of files.
 
-There are many shells, and one of them is Powershell. You may be surprised at how similar basic operations look between Powershell and others shells. You might be surprised, too, that Powershell works fine as a Linux shell, as demonstrated here.
+There are many shells, and one of them is Powershell. You may be surprised at how similar basic operations look between Powershell and others shells. You might be surprised, too, that Powershell works fine as a Mac or Linux shell, as demonstrated here.
 
 -->
 
@@ -145,7 +145,7 @@ Some, like Mac Terminal, Windows Terminal, or Gnome Terminal, probably came with
 
 There are some hip newer terminals that run on Windows, Mac and Linux, such as those on the right.
 
-None of these are shells, though. And it gets confusing on Windows. In not very old versions of Windows, when you launch Powershell you get a window. That window is a terminal called conhost, until recently. And the shell inside it is Powershell. We don't really need to understand that, but I hope you will seek out Windows Terminal. If you don't have it, get it. But you probably do have it, and can make a shortcut in a convenient location for you.
+None of these are shells, though. And it gets confusing on Windows. In not very old versions of Windows, when you launch Powershell you get a window. That window is a terminal called conhost, until recently. And the shell inside it is Powershell. We don't really need to understand that, but I hope you will seek out Windows Terminal. If you don't have it, get it. But you probably do have it, and can make a shortcut in a convenient location for you. Windows Terminal will run any shell -- git bash, WSL, CMD, and yes, Powershell.
 
 -->
 
@@ -178,7 +178,7 @@ An interpreter that provides a command-line user interface for operating systems
 
 A shell is an interpreter to interact with or run scripts with. Some nice old ones are on the left. If you run Mac, you likely use zsh. If you run Linux, you may run bash or possibly zsh. If you live on the front of the bell curve, you might use one from the right column.
 
-These don't really matter to us if we are on Windows using Powershell. Other than the history: Powershell exists because people wanted to bring the power and flexibility of these tools to Windows. And then people wanted Powershell on more than just Windows.
+These don't really matter to us if we are on Windows using Powershell, except the point that the shell is different than the windows decorations around it. And the history: Powershell exists because people wanted to bring the power and flexibility of these tools to Windows. And then people wanted Powershell on more than just Windows.
 
 -->
 ---
@@ -326,7 +326,7 @@ Powershell is much bigger than that, as I find out later. But if you do a casual
 
 There are a lot of people who do not write code. Who do not think they can write code. And they start because they want to make their system administration a little easier. And Powershell is that gentle on-ramp for writing computer programs to make life better.
 
-People who might not pick up bash or Python or Ruby, might just pick up Powershell.
+People who might not pick up bash or Python or Ruby, or a .NET language other than Powershell, they might just pick up Powershell.
 
 -->
 
